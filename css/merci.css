@@ -1,0 +1,146 @@
+:root {
+  --blue: #006ee6;
+  --blue-dark: #003d80;
+  --white: #ffffff;
+  --black: #000000;
+  --gray: #5f6b7a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Manrope", sans-serif;
+  background: var(--white);
+  color: var(--black);
+}
+
+.thank-you {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.thank-you-content {
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+}
+
+.logo {
+  display: inline-block;
+  margin-bottom: 45px;
+}
+
+.logo img {
+  width: 150px;
+  height: auto;
+  display: block;
+}
+
+.thank-you-label {
+  margin-bottom: 18px;
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+h1 {
+  margin-bottom: 24px;
+  color: var(--blue-dark);
+  font-size: clamp(38px, 6vw, 64px);
+  line-height: 1.08;
+  letter-spacing: -2px;
+}
+
+.thank-you-description {
+  max-width: 580px;
+  margin: 0 auto;
+  color: var(--gray);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* =========================
+   BOUTON ACCUEIL
+========================= */
+
+.btn-home {
+  display: inline-block;
+  margin-top: 35px;
+  padding: 15px 28px;
+
+  background-color: var(--blue);
+  color: var(--white);
+
+  border-radius: 6px;
+
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.btn-home:hover {
+  background-color: var(--blue-dark);
+  transform: translateY(-2px);
+}
+
+.thank-you-footer {
+  margin-top: 50px;
+  color: var(--gray);
+  font-size: 14px;
+}
+
+.thank-you-footer span {
+  display: block;
+  margin-top: 8px;
+  color: var(--blue-dark);
+  font-weight: 800;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .thank-you {
+    padding: 30px 20px;
+  }
+
+  .logo {
+    margin-bottom: 35px;
+  }
+
+  .logo img {
+    width: 125px;
+  }
+
+  h1 {
+    letter-spacing: -1.5px;
+  }
+
+  .thank-you-description {
+    font-size: 15px;
+  }
+
+  .btn-home {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .thank-you-footer {
+    margin-top: 40px;
+  }
+}

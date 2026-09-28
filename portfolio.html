@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Portfolio — Ga.B Agency</title>
+
+  <meta name="description" content="Découvrez une sélection de réalisations graphiques de Ga.B Agency." />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/portfolio.css" />
+
+  <link rel="icon" type="image/png" href="assets/images/logo2.png" media="(prefers-color-scheme: light)" />
+
+  <!-- Mode sombre : logo blanc -->
+  <link rel="icon" type="image/png" href="assets/images/logo4.png" media="(prefers-color-scheme: dark)" />
+
+  <!-- =========================================================
+         GOOGLE FONT
+    ========================================================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <div class="page-loader" id="page-loader">
+    <div class="page-loader-logo">
+      <img src="assets/images/logo2.png" alt="Ga.B World" />
+    </div>
+  </div>
+  <!-- =========================
+         HEADER / NAVIGATION
+    ========================== -->
+  <header class="header">
+    <div class="container navbar">
+      <!-- <a href="index.html" class="logo"> Ga.B Agency </a> -->
+      <a href="index.html" class="logo" aria-label="Ga.B World - Accueil">
+        <img src="assets/images/logo2.png" alt="Ga.B World" />
+
+        <span>Ga.B Agency</span>
+      </a>
+
+      <nav class="nav">
+        <a href="index.html">Accueil</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#about">À propos</a>
+        <a href="portfolio.html" class="nav-portfolio">Portfolio</a>
+        <a href="https://tally.so/r/wA1B2C" class="nav-cta" target="_blank" rel="noopener noreferrer">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <!-- =========================
+             INTRODUCTION
+        ========================== -->
+    <section class="portfolio-hero">
+    <div class="portfolio-hero-decoration"></div>
+
+    <div class="container portfolio-hero-content">
+        <div class="portfolio-hero-text">
+            <p class="section-label">GA.B AGENCY</p>
+            <h1>Portfolio</h1>
+            <p>Une sélection de nos réalisations graphiques.</p>
+        </div>
+
+        <div class="portfolio-hero-number"></div>
+    </div>
+</section>
+
+    <!-- =========================
+             PORTFOLIO
+        ========================== -->
+    <section class="portfolio-section">
+      <div class="container">
+        <!-- Filtres -->
+        <div class="portfolio-filters">
+          <button class="filter-btn active" data-filter="all">Tous</button>
+
+          <button class="filter-btn" data-filter="affiches">Affiches</button>
+
+          <button class="filter-btn" data-filter="reseaux-sociaux">
+            Réseaux sociaux
+          </button>
+
+          <button class="filter-btn" data-filter="logos">Logos</button>
+
+          <button class="filter-btn" data-filter="flyers">Flyers</button>
+
+          <button class="filter-btn" data-filter="rollup">Roll-Up</button>
+        </div>
+
+        <!-- Galerie -->
+        <div class="portfolio-grid" id="portfolio-grid">
+          <!--
+                        Les réalisations seront générées
+                        automatiquement par portfolio.js
+                    -->
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta section" id="contact">
+      <div class="container final-cta-content">
+        <p class="section-label">VOTRE PROJET</p>
+
+        <h2>Vous avez un projet graphique ?</h2>
+
+        <p>
+          Décrivez-nous votre besoin et nous vous recontacterons pour en
+          discuter.
+        </p>
+
+        <a href="https://tally.so/r/wA1B2C" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          Parlez-nous de votre projet
+        </a>
+      </div>
+    </section>
+    <!-- =========================
+             LIGHTBOX
+        ========================== -->
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Fermer">
+        &times;
+      </button>
+
+      <img id="lightbox-image" src="" alt="Réalisation Ga.B Agency" />
+    </div>
+  </main>
+
+  <!-- =========================
+         FOOTER
+    ========================== -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" aria-label="Ga.B World - Accueil">
+          <img src="assets/images/logo4.png" alt="Ga.B World" />
+
+          <span>Ga.B Agency</span>
+        </a>
+
+        <p>Design graphique pour entreprises, marques et professionnels.</p>
+      </div>
+
+      <div class="footer-services">
+        <h3>Services</h3>
+
+        <p>Affiches · Réseaux sociaux · Logos · Flyers · Roll-Up</p>
+      </div>
+
+      <div class="footer-navigation">
+        <h3>Navigation</h3>
+
+        <a href="index.html">Accueil</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="index.html#about">À propos</a>
+
+        <a href="https://tally.so/r/wA1B2C" target="_blank" rel="noopener noreferrer">
+          Contact
+        </a>
+      </div>
+
+      <div class="footer-social">
+        <h3>Suivez-nous</h3>
+
+        <a href="#" target="_blank" rel="noopener noreferrer"> Facebook </a>
+
+        <a href="#" target="_blank" rel="noopener noreferrer"> Instagram </a>
+
+        <a href="#" target="_blank" rel="noopener noreferrer"> LinkedIn </a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 Ga.B Agency. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+  <script src="js/main.js"></script>
+  <script src="data/portfolio.js"></script>
+  <script src="js/portfolio.js"></script>
+</body>
+
+</html>

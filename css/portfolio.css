@@ -1,0 +1,396 @@
+ /* =========================
+    PORTFOLIO HERO
+========================= */
+
+/* ================= PORTFOLIO HERO ================= */
+
+.portfolio-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 110px 0 100px;
+    background: linear-gradient(135deg, #f5f9ff 0%, #ffffff 55%, #eef5ff 100%);
+    border-bottom: 1px solid #e5edf7;
+}
+
+.portfolio-hero::before {
+    content: "";
+    position: absolute;
+    top: -180px;
+    right: -120px;
+    width: 480px;
+    height: 480px;
+    border-radius: 50%;
+    background: var(--blue-100);
+    opacity: 0.07;
+}
+
+.portfolio-hero::after {
+    content: "";
+    position: absolute;
+    bottom: -120px;
+    left: -80px;
+    width: 300px;
+    height: 300px;
+    border: 1px solid var(--blue-100);
+    border-radius: 50%;
+    opacity: 0.12;
+}
+
+.portfolio-hero-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 40px;
+}
+
+.portfolio-hero-text {
+    position: relative;
+    max-width: 700px;
+    padding-left: 28px;
+}
+
+.portfolio-hero-text::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    left: 0;
+    width: 4px;
+    background: var(--blue-100);
+    border-radius: 4px;
+}
+
+.portfolio-hero .section-label {
+    margin-bottom: 16px;
+    color: var(--blue-100);
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+}
+
+.portfolio-hero h1 {
+    margin: 0 0 18px;
+    color: var(--blue-700);
+    font-size: clamp(3rem, 7vw, 6rem);
+    line-height: 0.95;
+    letter-spacing: -0.05em;
+}
+
+.portfolio-hero-text > p:last-child {
+    margin: 0;
+    color: #526274;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.portfolio-hero-number {
+    color: var(--blue-100);
+    font-size: clamp(4rem, 9vw, 8rem);
+    font-weight: 800;
+    line-height: 0.8;
+    letter-spacing: -0.08em;
+    opacity: 0.12;
+    user-select: none;
+}
+
+@media (max-width: 700px) {
+    .portfolio-hero {
+        padding: 80px 0 75px;
+    }
+
+    .portfolio-hero-content {
+        align-items: flex-start;
+    }
+
+    .portfolio-hero-number {
+        display: none;
+    }
+
+    .portfolio-hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .portfolio-hero-text > p:last-child {
+        font-size: 1rem;
+    }
+}
+
+/* =========================
+   PORTFOLIO SECTION
+========================= */
+
+.portfolio-section {
+    padding: 40px 0 100px;
+    background-color: var(--white);
+}
+
+
+/* =========================
+   FILTRES
+========================= */
+
+.portfolio-filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 50px;
+}
+
+.filter-btn {
+    padding: 11px 20px;
+
+    border: 1px solid var(--blue-500);
+    border-radius: 4px;
+
+    background-color: var(--white);
+    color: var(--blue-500);
+
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.filter-btn:hover {
+    background-color: var(--blue-100);
+    border-color: var(--blue-100);
+    color: var(--white);
+}
+
+.filter-btn.active {
+    background-color: var(--blue-100);
+    border-color: var(--blue-100);
+    color: var(--white);
+}
+
+
+/* =========================
+   GRILLE
+========================= */
+
+.portfolio-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 24px;
+}
+
+
+/* =========================
+   ÉLÉMENT PORTFOLIO
+========================= */
+
+.portfolio-item {
+    position: relative;
+
+    overflow: hidden;
+
+    background-color: #f5f5f5;
+
+    cursor: pointer;
+
+    aspect-ratio: 1 / 1;
+
+    border-radius: 6px;
+}
+
+.portfolio-item img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.35s ease;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =========================
+   LIGHTBOX
+========================= */
+
+.lightbox {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px;
+
+    background-color: rgba(0, 0, 0, 0.92);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease;
+}
+
+.lightbox.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* =========================
+   IMAGE LIGHTBOX
+========================= */
+
+.lightbox img {
+    display: block;
+
+    max-width: 90vw;
+    max-height: 90vh;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+
+    border-radius: 4px;
+}
+
+
+/* =========================
+   BOUTON FERMER
+========================= */
+
+.lightbox-close {
+    position: absolute;
+
+    top: 20px;
+    right: 25px;
+
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--white);
+
+    font-size: 2.5rem;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition: transform 0.2s ease;
+}
+
+.lightbox-close:hover {
+    transform: scale(1.1);
+}
+
+
+/* =========================
+   EMPÊCHER LE SCROLL
+========================= */
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+
+/* =========================
+   RESPONSIVE — TABLETTE
+========================= */
+
+@media (max-width: 900px) {
+
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .portfolio-hero {
+        padding: 80px 0 50px;
+    }
+
+    .portfolio-hero h1 {
+        font-size: 3rem;
+    }
+
+}
+
+
+/* =========================
+   RESPONSIVE — MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .portfolio-hero {
+        padding: 60px 0 40px;
+    }
+
+    .portfolio-hero h1 {
+        font-size: 2.4rem;
+    }
+
+    .portfolio-hero p:not(.section-label) {
+        font-size: 1rem;
+    }
+
+    .portfolio-section {
+        padding: 30px 0 70px;
+    }
+
+    .portfolio-filters {
+        justify-content: flex-start;
+        margin-bottom: 35px;
+    }
+
+    .filter-btn {
+        padding: 9px 15px;
+        font-size: 0.85rem;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .lightbox {
+        padding: 20px;
+    }
+
+    .lightbox img {
+        max-width: 94vw;
+        max-height: 85vh;
+    }
+
+    .lightbox-close {
+        top: 10px;
+        right: 15px;
+    }
+
+}
+
