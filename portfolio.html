@@ -36,16 +36,21 @@
   <!-- =========================
          HEADER / NAVIGATION
     ========================== -->
-  <header class="header">
+    <header class="header">
     <div class="container navbar">
-      <!-- <a href="index.html" class="logo"> Ga.B Agency </a> -->
       <a href="index.html" class="logo" aria-label="Ga.B World - Accueil">
         <img src="assets/images/logo2.png" alt="Ga.B World" />
-
         <span>Ga.B Agency</span>
       </a>
 
-      <nav class="nav">
+      <!-- Bouton Menu Mobile (Hamburger) -->
+      <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav" id="navMenu">
         <a href="index.html">Accueil</a>
         <a href="index.html#services">Services</a>
         <a href="index.html#about">À propos</a>
@@ -54,21 +59,27 @@
       </nav>
     </div>
   </header>
+
+  
   <main>
     <!-- =========================
              INTRODUCTION
         ========================== -->
-    <section class="portfolio-hero">
+   <section class="portfolio-hero">
     <div class="portfolio-hero-decoration"></div>
+    <div class="portfolio-hero-glow"></div>
 
     <div class="container portfolio-hero-content">
         <div class="portfolio-hero-text">
-            <p class="section-label">GA.B AGENCY</p>
-            <h1>Portfolio</h1>
-            <p>Une sélection de nos réalisations graphiques.</p>
+            <span class="section-label">GA.B AGENCY</span>
+            <h1>Notre Portfolio</h1>
+            <p>Plongez au cœur de nos créations graphiques : affiches, identités visuelles, flyers et supports digitaux conçus sur-mesure.</p>
         </div>
 
-        <div class="portfolio-hero-number"></div>
+        <div class="portfolio-hero-badge">
+            <span class="badge-icon">✦</span>
+            <span>+30 Projets Réalisés</span>
+        </div>
     </div>
 </section>
 
